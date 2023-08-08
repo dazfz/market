@@ -13,32 +13,33 @@ import Account from "./components/Account.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/",
+    path: "/market/buy",
+    name: "buy",
     component: Buy,
   },
   {
-    path: "/product",
+    path: "/market/product",
     name: "product",
     component: Product,
     props: true,
   },
   {
-    path: "/sell",
+    path: "/market/sell",
     name: "sell",
     component: Sell,
   },
   {
-    path: "/pay",
+    path: "/market/pay",
     name: "pay",
     component: Pay,
   },
   {
-    path: "/account",
+    path: "/market/account",
     name: "account",
     component: Account,
   },
   {
-    path: "/productForm",
+    path: "/market/sell/productForm",
     name: "productForm",
     component: ProductForm,
   },

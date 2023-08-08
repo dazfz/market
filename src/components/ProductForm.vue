@@ -24,11 +24,11 @@ const createProduct = () => {
     );
 
     store.commit('addProduct', newProduct);
-    router.push('/sell');
+    router.push({ name: "sell" });
 };
 
 const cancel = () => {
-    router.push('/sell');
+    router.push({ name: "sell" });
 };
 
 const onImageChange = (event: any) => {

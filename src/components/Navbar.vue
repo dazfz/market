@@ -21,27 +21,27 @@ const isActive = (route: string) => {
         <ul class="is-flex is-justify-content-space-between">
             <li class="icon-text"><span class="icon"><i class="fas fa-store"></i></span>Market</li>
             <li class="is-flex">
-            <li :class="{ 'is-active': isActive('/pay') }">
-                <router-link to="/pay" @click.native="setActive('/pay')">
+            <li :class="{ 'is-active': isActive('/market/pay') }">
+                <router-link to="/market/pay" @click.native="setActive('/market/pay')">
                     <span class="icon is-small"><i class="far fa-credit-card" aria-hidden="true"></i></span>
                     <span class="nav-text">Pay</span>
                     <span v-if="cart.size > 0" class="tag is-danger is-rounded ml-2">{{ cart.size }}</span>
                 </router-link>
             </li>
-            <li :class="{ 'is-active': isActive('/') }">
-                <router-link to="/" @click.native="setActive('/')">
+            <li :class="{ 'is-active': isActive('/market/buy') }">
+                <router-link to="/market/buy" @click.native="setActive('/market/buy')">
                     <span class="icon is-small"><i class="fas fa-shopping-cart" aria-hidden="true"></i></span>
                     <span class="nav-text">Buy</span>
                 </router-link>
             </li>
-            <li :class="{ 'is-active': isActive('/sell') }">
-                <router-link to="/sell" @click.native="setActive('/sell')">
+            <li :class="{ 'is-active': isActive('/market/sell') }">
+                <router-link to="/market/sell" @click.native="setActive('/market/sell')">
                     <span class="icon is-small"><i class="fas fa-tag" aria-hidden="true"></i></span>
                     <span class="nav-text">Sell</span>
                 </router-link>
             </li>
-            <li :class="{ 'is-active': isActive('/account') }">
-                <router-link to="/account" @click.native="setActive('/account')">
+            <li :class="{ 'is-active': isActive('/market/account') }">
+                <router-link to="/market/account" @click.native="setActive('/market/account')">
                     <span class="icon is-small"><i class="fas fa-user" aria-hidden="true"></i></span>
                     <span class="nav-text">Account</span>
                 </router-link>
