@@ -1,22 +1,86 @@
 # Market
 
-![My Skills](https://skillicons.dev/icons?i=html,css,ts,vite,vue)
+![My Skills](https://skillicons.dev/icons?i=html,css,ts,vite,vue,php,laravel,mysql)
 
-# Vue 3 + TypeScript + Vite
+## Instrucciones
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Requisitos previos
 
-## Recommended IDE Setup
+- [Node.js](https://nodejs.org/)
+- [Composer](https://getcomposer.org/)
+- [PHP](https://www.php.net/)
+- [Laravel](https://laravel.com/docs/10.x/installation)
+- [MySQL](https://www.mysql.com/)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Configuración
 
-## Type Support For `.vue` Imports in TS
+1. Clonar repositorio:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+```bash
+git clone https://github.com/dazfz/market.git
+```
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+2. Navegar al directorio del proyecto:
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```bash
+cd market
+```
+
+3. Instala las dependencias:
+
+```bash
+npm install
+```
+
+4. Navegar al directorio del back-end:
+
+```bash
+cd back
+```
+
+5. Copiar el archivo `.env.example` y renombrarlo a `.env`. Luego, configurar las variables de entorno necesarias, como la conexión a la base de datos y la URL base de la API.
+
+6. Generar la clave de la aplicación de Laravel:
+
+```bash
+php artisan key:generate
+```
+
+7. Ejecutar las migraciones para crear las tablas en la base de datos:
+
+```bash
+php artisan migrate
+```
+
+### Uso
+
+1. Inicia el servidor de desarrollo para el frontend:
+
+```bash
+cd front
+```
+
+```bash
+npm run dev
+```
+
+2. Inicia el servidor de desarrollo para el backend:
+
+```bash
+cd back
+```
+
+```bash
+php artisan serve
+```
+
+3. Acceder a la aplicación en el navegador web en la URL proporcionada por el front-end. Generalmente es: http://localhost:8000/market
+
+### Características
+
+- Lista de productos disponibles.
+- Detalles de un producto específico.
+- Agregar nuevos productos.
+- Actualizar información de productos existentes.
+- Eliminar productos.
+- Carrito de compras.
